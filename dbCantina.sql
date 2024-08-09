@@ -25,6 +25,13 @@ create table tbFornecedores(
     primary key (codForn)
 );
 
+create table tbClientes(
+    codCli int not null auto_increment,
+    nome varchar(100) not null,
+    email varchar(100),
+    telCel char(10),
+    primary key (codCli)
+);
 
 create table tbUsuarios(
     codUsu int not null auto_increment,
@@ -49,8 +56,24 @@ create table tbProdutos(
     foreign key(codForn) references tbFornecedores(codForn)
 );
 
+create table tbVendas(
+    codVenda int not null auto_increment,
+    dataVenda date,
+    horaVenda time,
+    quantidade int,
+    codUsu int not null,
+    codCli int not null,
+    codProd int not null,
+    primary key (codVenda),
+    foreign key(codUsu)references tbUsuarios(codUsu),
+    foreign key(codCli)references tbClientes(codCli),
+    foreign key(codProd)references tbProdutos(codProd)
+);
+
 -- visualizando tabelas
 desc tbFuncionarios;
-desc tbUsuarios;
 desc tbFornecedores;
+desc tbClientes;
+desc tbUsuarios;
 desc tbProdutos;
+desc tbVendas;
