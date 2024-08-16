@@ -20,7 +20,7 @@ create table tbFuncionarios(
 create table tbFornecedores(
     codForn int not null auto_increment,
     nome varchar(100) not null,
-    cnpj char(17) not null unique,
+    cnpj char(18) not null unique,
     email varchar(100) not null,
     primary key (codForn)
 );
@@ -77,3 +77,35 @@ desc tbClientes;
 desc tbUsuarios;
 desc tbProdutos;
 desc tbVendas;
+
+--inserindo valores nas tabelas 
+
+INSERT INTO tbFuncionarios(nome, email, cpf, sexo, salario, nascimento, telCel) 
+VALUES ('italo','italo@email.com','123.123.123.12','M',1000,'1998-01-08','98782-5038');
+
+INSERT INTO tbFornecedores(nome,cnpj,email)
+VALUES('fornecedor1','12.345.678/0001-00','fornecedor1@mail.com');
+INSERT INTO tbFornecedores(nome,cnpj,email)
+VALUES('fornecedor2','12.345.678/0222-01','fornecedor2@mail.com');
+
+
+INSERT INTO tbClientes(nome,email,telCel)
+VALUES('Bianca','bianca@email.com','99525-5214');
+INSERT INTO tbClientes(nome,email,telCel)
+VALUES('Ronaldo','ronaldo@email.com','99999-9999');
+INSERT INTO tbClientes(nome,email,telCel)
+VALUES('Jorge','jorge@email.com','91010-1010');
+
+
+
+
+
+
+
+
+
+
+
+select * from tbFuncionarios;
+select* from tbFornecedores;
+select * from tbClientes;
