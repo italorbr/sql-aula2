@@ -115,6 +115,10 @@ VALUES('Cadeira',50,1550.00,'2030-06-25','2024-08-16','20:00:55',1);
 
 INSERT INTO tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)
 VALUES('2024/08/16','19:54:00',2,1,2,4);
+INSERT INTO tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)
+VALUES('2024/08/16','21:54:00',12,1,2,1);
+INSERT INTO tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)
+VALUES('2024/08/16','22:00:00',1,2,1,2);
 
 
 select * from tbFuncionarios;
