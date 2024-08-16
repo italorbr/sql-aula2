@@ -82,6 +82,8 @@ desc tbVendas;
 
 INSERT INTO tbFuncionarios(nome, email, cpf, sexo, salario, nascimento, telCel) 
 VALUES ('italo','italo@email.com','123.123.123.12','M',1000,'1998-01-08','98782-5038');
+INSERT INTO tbFuncionarios(nome, email, cpf, sexo, salario, nascimento, telCel) 
+VALUES ('carlos','carlos@email.com','123.123.123.22','F',1000,'1998-01-10','98782-0000');
 
 INSERT INTO tbFornecedores(nome,cnpj,email)
 VALUES('fornecedor1','12.345.678/0001-00','fornecedor1@mail.com');
@@ -96,16 +98,28 @@ VALUES('Ronaldo','ronaldo@email.com','99999-9999');
 INSERT INTO tbClientes(nome,email,telCel)
 VALUES('Jorge','jorge@email.com','91010-1010');
 
+INSERT INTO tbUsuarios(nome,senha,codFunc)
+VALUES('italo','0123456789',1);
+INSERT INTO tbUsuarios(nome,senha,codFunc)
+VALUES('carlos','0123456780',2);
+
+INSERT INTO tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)
+VALUES('Mesa martinelli',15,850.00,'2030-06-25','2024-08-16','19:50:55',1);
+INSERT INTO tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)
+VALUES('Pamonha',150,2.50,'2024-08-20','2024-08-16','19:53:55',2);
+INSERT INTO tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)
+VALUES('Bolo de morango',20,33.00,'2024-08-19','2024-08-16','19:54:00',2);
+INSERT INTO tbProdutos(descricao,quantidade,valor,validade,dataEntrada,horaEntrada,codForn)
+VALUES('Cadeira',50,1550.00,'2030-06-25','2024-08-16','20:00:55',1);
 
 
-
-
-
-
-
-
+INSERT INTO tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)
+VALUES('2024/08/16','19:54:00',2,1,2,4);
 
 
 select * from tbFuncionarios;
 select* from tbFornecedores;
 select * from tbClientes;
+select * from tbUsuarios;
+select * from tbProdutos;
+select * from tbVendas;
