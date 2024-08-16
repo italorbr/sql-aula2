@@ -121,6 +121,12 @@ INSERT INTO tbVendas(dataVenda,horaVenda,quantidade,codUsu,codCli,codProd)
 VALUES('2024/08/16','22:00:00',1,2,1,2);
 
 
+-- alterando registros das tabelas
+
+UPDATE tbProdutos SET descricao = 'Coxinha',valor = 7.00 WHERE codProd = 1;
+UPDATE tbProdutos SET descricao = 'Pastel',valor = 10.00 WHERE codProd = 4;
+
+
 select * from tbFuncionarios;
 select* from tbFornecedores;
 select * from tbClientes;
